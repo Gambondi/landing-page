@@ -60,7 +60,7 @@
                             <li><a href="project-2.html">Healthcare AI Agents</a></li>
 						</ul>
                     </li>
-					<li><a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:b2ce8380-9f0b-4d97-a622-cbfced32c1a8" target="_blank">resume</a></li>
+					<li><a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:735d2e0b-53b7-43fe-a3c5-9a5ca37e86b9" target="_blank">resume</a></li>
                 </ul>
             </nav>
         </header>
@@ -71,8 +71,8 @@
                 <header>
                     <h2>Matthew Moturi Ondeyo</h2>
                     <p>student developer.<br />
-                    incoming fourth year @ UChicago.
-                    machine learning engineer @ IBM in 2026</s></p>
+                    incoming fourth year @ UChicago.<br />
+                    machine learning engineer @ IBM in 2026</p>
 					<ul class="icons">
 							<li><a href="https://github.com/Gambondi" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
 							<li><a href="https://www.linkedin.com/in/matthew-ondeyo/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
@@ -137,39 +137,42 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const asciiChars = ['*', '+', '•', '◦', '▪', '▫', '○', '●', '◆', '◇', '♦', '♢', '※'];
-            let lastTime = 0;
-            const throttleDelay = 80; // milliseconds
-            
-            function createTrail(x, y) {
-                const trail = document.createElement('div');
-                trail.className = 'ascii-trail';
-                trail.textContent = asciiChars[Math.floor(Math.random() * asciiChars.length)];
-                trail.style.left = x + 'px';
-                trail.style.top = y + 'px';
+            // Only enable ASCII trail on desktop (non-touch devices)
+            if (!('ontouchstart' in window) && !navigator.maxTouchPoints) {
+                const asciiChars = ['*', '+', '•', '◦', '▪', '▫', '○', '●', '◆', '◇', '♦', '♢', '※'];
+                let lastTime = 0;
+                const throttleDelay = 80; // milliseconds
                 
-                // Add slight random offset for more organic feel
-                const randomOffset = 10;
-                trail.style.left = (x + (Math.random() - 0.5) * randomOffset) + 'px';
-                trail.style.top = (y + (Math.random() - 0.5) * randomOffset) + 'px';
-                
-                document.body.appendChild(trail);
-                
-                // Remove element after animation completes
-                setTimeout(() => {
-                    if (trail.parentNode) {
-                        trail.parentNode.removeChild(trail);
-                    }
-                }, 1500);
-            }
-            
-            document.addEventListener('mousemove', function(e) {
-                const currentTime = Date.now();
-                if (currentTime - lastTime > throttleDelay) {
-                    createTrail(e.clientX, e.clientY);
-                    lastTime = currentTime;
+                function createTrail(x, y) {
+                    const trail = document.createElement('div');
+                    trail.className = 'ascii-trail';
+                    trail.textContent = asciiChars[Math.floor(Math.random() * asciiChars.length)];
+                    trail.style.left = x + 'px';
+                    trail.style.top = y + 'px';
+                    
+                    // Add slight random offset for more organic feel
+                    const randomOffset = 10;
+                    trail.style.left = (x + (Math.random() - 0.5) * randomOffset) + 'px';
+                    trail.style.top = (y + (Math.random() - 0.5) * randomOffset) + 'px';
+                    
+                    document.body.appendChild(trail);
+                    
+                    // Remove element after animation completes
+                    setTimeout(() => {
+                        if (trail.parentNode) {
+                            trail.parentNode.removeChild(trail);
+                        }
+                    }, 1500);
                 }
-            });
+                
+                document.addEventListener('mousemove', function(e) {
+                    const currentTime = Date.now();
+                    if (currentTime - lastTime > throttleDelay) {
+                        createTrail(e.clientX, e.clientY);
+                        lastTime = currentTime;
+                    }
+                });
+            }
         });
     </script>
 
