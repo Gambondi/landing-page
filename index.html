@@ -13,6 +13,35 @@
             display: block;
             border-radius: 0; 
         }
+        
+        .ascii-trail {
+            position: fixed;
+            pointer-events: none;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 9999;
+            color: #e44c65;
+            text-shadow: 0 0 5px rgba(228, 76, 101, 0.6);
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            animation: fadeTrail 1.5s ease-out forwards;
+        }
+        
+        @keyframes fadeTrail {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+        }
     </style>
 </head>
 <body class="is-preload landing">
@@ -27,12 +56,8 @@
                     <li>
                         <a href="#">projects</a>
                         <ul>
-                            <li><a href="project-1.html">Project 1</a></li>
-                            <li><a href="project-2.html">Project 2</a></li>
-                            <li><a href="project-3.html">Project 3</a></li>
-							<li><a href="project-4.html">Project 4</a></li>
-							<li><a href="project-5.html">Project 5</a></li>
-							<li><a href="project-6.html">Project 6</a></li>
+                            <li><a href="project-1.html">Inventory Management</a></li>
+                            <li><a href="project-2.html">Healthcare AI Agents</a></li>
 						</ul>
                     </li>
 					<li><a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:b2ce8380-9f0b-4d97-a622-cbfced32c1a8" target="_blank">resume</a></li>
@@ -46,11 +71,12 @@
                 <header>
                     <h2>Matthew Moturi Ondeyo</h2>
                     <p>student developer.<br />
-                    incoming third year @ UChicago.</p>
+                    incoming fourth year @ UChicago.
+                    machine learning engineer @ IBM in 2026</s></p>
 					<ul class="icons">
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon solid  fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://github.com/Gambondi" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/matthew-ondeyo/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:ondeyo@uchicago.edu" class="icon solid  fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
                 </header>
                 <span class="image"><img src="images/blurry-lol.jpg" alt="Matthew Ondeyo" /></span>
@@ -67,35 +93,15 @@
                 </header>
                 <div class="box alt">
                     <div class="row gtr-uniform">
-                        <section class="col-4 col-6-medium col-12-xsmall">
+                        <section class="col-6 col-12-medium col-12-xsmall">
                             <span class="icon solid alt major fa-chart-area"></span>
-                            <h3>Pantry Management</h3>
-                            <p>Any of the headstarter swe fellow projects.</p>
+                            <h3>Inventory Management System</h3>
+                            <p>A comprehensive full-stack application built with Next.js, Firebase, and Tailwind CSS for efficient multi-store inventory tracking. Features real-time synchronization, responsive design, and scalable deployment on Vercel.</p>
                         </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <span class="icon solid alt major fa-comment"></span>
-                            <h3>Second Most Recent Project</h3>
-                            <p>i will explain this here</p>
-                        </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <span class="icon solid alt major fa-flask"></span>
-                            <h3>Third Most Recent Project</h3>
-                            <p>Explain here.</p>
-                        </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <span class="icon solid alt major fa-paper-plane"></span>
-                            <h3>Fourth Most Recent</h3>
-                            <p>Explain here bro cmon mane be great.</p>
-                        </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <span class="icon solid alt major fa-file"></span>
-                            <h3>Fifth Most recent Project</h3>
-                            <p>Do better mane.</p>
-                        </section>
-                        <section class="col-4 col-6-medium col-12-xsmall">
-                            <span class="icon solid alt major fa-lock"></span>
-                            <h3>Earliest Project ever mane</h3>
-                            <p>Here we will explain.</p>
+                        <section class="col-6 col-12-medium col-12-xsmall">
+                            <span class="icon solid alt major fa-brain"></span>
+                            <h3>Healthcare Policy Agent System</h3>
+                            <p>Advanced multi-agent RAG system processing 100+ CMS policy documents using LangGraph orchestration, AWS Bedrock with Claude Sonnet 4, and semantic analysis for intelligent healthcare policy management.</p>
                         </section>
                     </div>
                 </div>
@@ -108,9 +114,9 @@
         <!-- Footer -->
         <footer id="footer">
             <ul class="icons">
-                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="https://www.linkedin.com/in/matthew-ondeyo/" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/Gambondi" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:ondeyo@uchicago.edu" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
             </ul>
             <ul class="copyright">
                 <li>&copy; Moturi. All rights reserved.</li>
@@ -128,6 +134,44 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const asciiChars = ['*', '+', '•', '◦', '▪', '▫', '○', '●', '◆', '◇', '♦', '♢', '※'];
+            let lastTime = 0;
+            const throttleDelay = 80; // milliseconds
+            
+            function createTrail(x, y) {
+                const trail = document.createElement('div');
+                trail.className = 'ascii-trail';
+                trail.textContent = asciiChars[Math.floor(Math.random() * asciiChars.length)];
+                trail.style.left = x + 'px';
+                trail.style.top = y + 'px';
+                
+                // Add slight random offset for more organic feel
+                const randomOffset = 10;
+                trail.style.left = (x + (Math.random() - 0.5) * randomOffset) + 'px';
+                trail.style.top = (y + (Math.random() - 0.5) * randomOffset) + 'px';
+                
+                document.body.appendChild(trail);
+                
+                // Remove element after animation completes
+                setTimeout(() => {
+                    if (trail.parentNode) {
+                        trail.parentNode.removeChild(trail);
+                    }
+                }, 1500);
+            }
+            
+            document.addEventListener('mousemove', function(e) {
+                const currentTime = Date.now();
+                if (currentTime - lastTime > throttleDelay) {
+                    createTrail(e.clientX, e.clientY);
+                    lastTime = currentTime;
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
