@@ -28,6 +28,73 @@
             animation: fadeTrail 1.5s ease-out forwards;
         }
         
+        /* Glassmorphism Header */
+        #header {
+            background: rgba(28, 29, 38, 0.25) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        #header:hover {
+            background: rgba(28, 29, 38, 0.35) !important;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        /* Enhance logo with subtle glow */
+        #header #logo a {
+            text-shadow: 0 0 10px rgba(228, 76, 101, 0.3);
+            transition: text-shadow 0.3s ease;
+        }
+        
+        #header #logo a:hover {
+            text-shadow: 0 0 15px rgba(228, 76, 101, 0.6);
+        }
+        
+        /* Glassmorphism Projects Section */
+        #four {
+            background: rgba(28, 29, 38, 0.15) !important;
+            backdrop-filter: blur(15px) !important;
+            -webkit-backdrop-filter: blur(15px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            border-radius: 20px !important;
+            margin: 2rem 0 !important;
+            padding: 3rem 2rem !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        /* Project cards glassmorphism */
+        #four .box.alt .row section {
+            background: rgba(28, 29, 38, 0.2) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 15px !important;
+            padding: 2rem !important;
+            margin: 1rem 0.5rem !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        #four .box.alt .row section:hover {
+            background: rgba(28, 29, 38, 0.3) !important;
+            transform: translateY(-5px) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        /* Icon glow effect */
+        #four .icon.major {
+            color: #e44c65 !important;
+            filter: drop-shadow(0 0 10px rgba(228, 76, 101, 0.3)) !important;
+            transition: filter 0.3s ease !important;
+        }
+        
+        #four .box.alt .row section:hover .icon.major {
+            filter: drop-shadow(0 0 15px rgba(228, 76, 101, 0.6)) !important;
+        }
+        
         @keyframes fadeTrail {
             0% {
                 opacity: 1;
@@ -94,12 +161,12 @@
                 <div class="box alt">
                     <div class="row gtr-uniform">
                         <section class="col-6 col-12-medium col-12-xsmall">
-                            <span class="icon solid alt major fa-chart-area"></span>
+                            <span class="icon solid alt major fa-database"></span>
                             <h3>Inventory Management System</h3>
                             <p>A comprehensive full-stack application built with Next.js, Firebase, and Tailwind CSS for efficient multi-store inventory tracking. Features real-time synchronization, responsive design, and scalable deployment on Vercel.</p>
                         </section>
                         <section class="col-6 col-12-medium col-12-xsmall">
-                            <span class="icon solid alt major fa-brain"></span>
+                            <span class="icon solid alt major fa-robot"></span>
                             <h3>Healthcare Policy Agent System</h3>
                             <p>Advanced multi-agent RAG system processing 100+ CMS policy documents using LangGraph orchestration, AWS Bedrock with Claude Sonnet 4, and semantic analysis for intelligent healthcare policy management.</p>
                         </section>
@@ -139,7 +206,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Only enable ASCII trail on desktop (non-touch devices)
             if (!('ontouchstart' in window) && !navigator.maxTouchPoints) {
-                const asciiChars = ['*', '+', '•', '◦', '▪', '▫', '○', '●', '◆', '◇', '♦', '♢', '※'];
+                const asciiChars = ['*', '+', '$', '•', '◦', '▪', '▫', '○', '●', '◆', '◇', '♦', '♢', '※'];
                 let lastTime = 0;
                 const throttleDelay = 80; // milliseconds
                 

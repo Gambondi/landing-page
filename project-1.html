@@ -11,6 +11,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Glassmorphism Header */
+			#header {
+				background: rgba(28, 29, 38, 0.25) !important;
+				backdrop-filter: blur(20px) !important;
+				-webkit-backdrop-filter: blur(20px) !important;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+				transition: all 0.3s ease !important;
+			}
+			
+			#header:hover {
+				background: rgba(28, 29, 38, 0.35) !important;
+				box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
+			}
+			
+			/* Enhance logo with subtle glow */
+			#header #logo a {
+				text-shadow: 0 0 10px rgba(228, 76, 101, 0.3);
+				transition: text-shadow 0.3s ease;
+			}
+			
+			#header #logo a:hover {
+				text-shadow: 0 0 15px rgba(228, 76, 101, 0.6);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
